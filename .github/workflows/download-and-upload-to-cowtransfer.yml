@@ -45,11 +45,14 @@ jobs:
         wget $line;
         done
         EOF
+        mkdir downloads
+        cp download.sh downloadlist.txt downloads/
+
+    - name: SSH connection
+      uses: mxschmitt/action-tmate@v2
 
     - name: Download files
       run: |
-        mkdir downloads
-        cp download.sh downloadlist.txt downloads/
         cd downloads/
         ./download.sh
         rm download.sh
