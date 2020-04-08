@@ -15,7 +15,7 @@ on:
   watch:
     types: started
 
-env
+env:
   SSH_ACTIONS: false
 
 jobs:
