@@ -14,7 +14,10 @@ on:
       - 'downloadlist.txt'
   watch:
     types: started
-  
+
+env
+  SSH_ACTIONS: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -42,7 +45,7 @@ jobs:
         #!/bin/bash
         cat downloadlist.txt | while read line;
         do 
-        wget $line;
+        wget \$line;
         done
         EOF
         mkdir downloads
@@ -50,6 +53,7 @@ jobs:
 
     - name: SSH connection
       uses: mxschmitt/action-tmate@v2
+      if: env.SSH_ACTIONS == 'true'
 
     - name: Download files
       run: |
