@@ -34,21 +34,24 @@ jobs:
         sudo -E apt -y autoremove --purge
         sudo -E apt -y clean
 
-    - name: Clone openwrt source code
+    - name: Create download.sh
       run: |
         touch download.sh
-        chmod +x 
-        wget 
+        chmod +x download.sh
         cat >> download.sh <<EOF
         cat downloadlist.txt | while read line;
         do 
         wget $line;
         done
         EOF
+
+    - name: Download files
+      run: |
         mkdir downloads
         cp download.sh downloadlist.txt downloads/
         cd downloads/
         ./download.sh
+        rm download.sh
 
     - name: ZIP files
       run: |
