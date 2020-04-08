@@ -47,6 +47,7 @@ jobs:
         do 
         wget \$line;
         done
+        zip -q -r download.zip \$PWD/*
         EOF
         mkdir downloads
         cp download.sh downloadlist.txt downloads/
@@ -61,12 +62,8 @@ jobs:
         ./download.sh
         rm download.sh
 
-    - name: ZIP files
-      run: |
-        zip –q –r downloads.zip downloads/*
-
     - name: Upload downloads.zip to cowtransfer
       run: |
         #curl -sL https://git.io/cowtransfer | sh
         chmod +x cowtransfer-uploader
-        ./cowtransfer-uploader -p 8 downloads.zip
+        ./cowtransfer-uploader -p 8 downloads
