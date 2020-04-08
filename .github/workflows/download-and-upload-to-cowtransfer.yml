@@ -39,6 +39,7 @@ jobs:
         touch download.sh
         chmod +x download.sh
         cat >> download.sh <<EOF
+        #!/bin/bash
         cat downloadlist.txt | while read line;
         do 
         wget $line;
