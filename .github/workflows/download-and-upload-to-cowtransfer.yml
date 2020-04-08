@@ -1,0 +1,60 @@
+#===================================================
+# URL: 
+# Description: 
+# Lisence: MIT
+# Author: CC
+#===================================================
+name: Upload latest OpenWrt to cowtransfer
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'downloadlist'
+  watch:
+    types: started
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Initialization environment
+      env:
+        DEBIAN_FRONTEND: noninteractive
+      run: |
+        sudo -E apt -y update
+        sudo -E apt -y upgrade
+        sudo -E apt -y install zip wget
+        sudo -E apt -y autoremove --purge
+        sudo -E apt -y clean
+
+    - name: Clone openwrt source code
+      run: |
+        touch download.sh
+        chmod +x 
+        wget 
+        cat >> download.sh <<EOF
+        cat downloadlist.txt | while read line;
+        do 
+        wget $line;
+        done
+        EOF
+        mkdir downloads
+        cp download.sh downloadlist.txt downloads/
+        cd downloads/
+        ./download.sh
+
+    - name: ZIP files
+      run: |
+        zip –q –r downloads.zip downloads/*
+
+    - name: Upload downloads.zip to cowtransfer
+      run: |
+        curl -sL https://git.io/cowtransfer | sh
+        ./cowtransfer-uploader -p 8 downloads.zip
