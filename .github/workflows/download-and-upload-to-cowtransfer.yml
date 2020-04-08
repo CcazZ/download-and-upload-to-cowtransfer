@@ -68,4 +68,5 @@ jobs:
     - name: Upload downloads.zip to cowtransfer
       run: |
         #curl -sL https://git.io/cowtransfer | sh
+        chmod +x cowtransfer-uploader
         ./cowtransfer-uploader -p 8 downloads.zip
