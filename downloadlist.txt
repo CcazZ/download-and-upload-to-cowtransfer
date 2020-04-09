@@ -1,5 +1,3 @@
-https://dlie.sogoucdn.com/se/sogou_explorer_8.6_0305_v1.exe
-http://quality-cdn.shouji.sogou.com/wapdl/android/apk/SogouInput_android_v10.6_sweb.apk
-https://qd.myapp.com/myapp/qqteam/pcqq/PCQQ2020.exe
-http://quality-cdn.shouji.sogou.com/wapdl/android/apk/SogouInput_android_v10.6_sweb.apk
-https://dldir1.qq.com/qqyy/pc/QQPlayerSetup4.6.2.1089.exe
+https://github.com/laurent22/joplin/releases/download/v1.0.197/Joplin-Setup-1.0.197.exe
+https://github.com/laurent22/joplin/releases/download/v1.0.197/Joplin-1.0.197.dmg
+https://github.com/laurent22/joplin/releases/download/v1.0.197/Joplin-1.0.197.AppImage
