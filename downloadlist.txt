@@ -3,4 +3,3 @@ http://quality-cdn.shouji.sogou.com/wapdl/android/apk/SogouInput_android_v10.6_s
 https://qd.myapp.com/myapp/qqteam/pcqq/PCQQ2020.exe
 http://quality-cdn.shouji.sogou.com/wapdl/android/apk/SogouInput_android_v10.6_sweb.apk
 https://dldir1.qq.com/qqyy/pc/QQPlayerSetup4.6.2.1089.exe
-
