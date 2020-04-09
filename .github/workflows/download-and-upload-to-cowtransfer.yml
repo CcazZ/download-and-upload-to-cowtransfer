@@ -16,8 +16,7 @@ on:
     types: started
 
 env:
-  SSH_ACTIONS: false
-
+  SSH_ACTIONS: true
 jobs:
   build:
     runs-on: ubuntu-latest
