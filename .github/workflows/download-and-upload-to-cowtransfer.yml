@@ -52,18 +52,18 @@ jobs:
         mkdir downloads
         cp download.sh downloadlist.txt downloads/
 
-    - name: SSH connection
-      uses: mxschmitt/action-tmate@v2
-      if: env.SSH_ACTIONS == 'true'
-
     - name: Download files
       run: |
         cd downloads/
         ./download.sh
         rm download.sh
 
+    - name: SSH connection
+      uses: mxschmitt/action-tmate@v2
+      if: env.SSH_ACTIONS == 'true'
+
     - name: Upload downloads.zip to cowtransfer
       run: |
         #curl -sL https://git.io/cowtransfer | sh
         chmod +x cowtransfer-uploader
-        ./cowtransfer-uploader -p 8 downloads
+        ./cowtransfer-uploader -s -p 8 downloads/
