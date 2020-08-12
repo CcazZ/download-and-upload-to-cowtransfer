@@ -1,3 +1,2 @@
-https://github.com/home-assistant/operating-system/releases/download/4.11/hassos_ova-4.11.ova
-https://github.com/home-assistant/operating-system/releases/download/4.11/hassos_ova-4.11.vmdk.gz
-
+https://repo.jellyfin.org/releases/server/centos/stable/web/jellyfin-web-10.6.2-1.el7.noarch.rpm
+https://repo.jellyfin.org/releases/server/centos/stable/server/jellyfin-server-10.6.2-1.el7.x86_64.rpm
