@@ -63,6 +63,6 @@ jobs:
 
     - name: Upload files to cowtransfer
       run: |
-        #curl -sL https://git.io/cowtransfer | sh
-        chmod +x cowtransfer-uploader
+        curl -sL https://git.io/cowtransfer | sh
+        #chmod +x cowtransfer-uploader
         ./cowtransfer-uploader -s -p 8 downloads/
