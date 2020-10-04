@@ -1,2 +1,1 @@
-https://repo.jellyfin.org/releases/server/centos/stable/web/jellyfin-web-10.6.2-1.el7.noarch.rpm
-https://repo.jellyfin.org/releases/server/centos/stable/server/jellyfin-server-10.6.2-1.el7.x86_64.rpm
+https://github.com/MediaBrowser/Emby.Releases/releases/download/4.5.1.0/emby-server-synology_4.5.1.0_x86_64.spk
