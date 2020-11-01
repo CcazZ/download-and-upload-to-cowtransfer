@@ -1,1 +1,2 @@
-https://github.com/MediaBrowser/Emby.Releases/releases/download/4.5.1.0/emby-server-synology_4.5.1.0_x86_64.spk
+https://download.truenas.com/TrueNAS-SCALE-Angelfish-ALPHA/20.10-ALPHA/TrueNAS-SCALE-20.10-ALPHA.iso
+https://download.freenas.org/12.0/STABLE/RELEASE/x64/TrueNAS-12.0-RELEASE.iso
